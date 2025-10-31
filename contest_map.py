@@ -2,6 +2,7 @@ import geopandas as gpd
 import folium
 import pandas as pd
 import os
+# to view a map https://ian33.github.io/election_results/data/maps/CITY_OF_EDMONDS_Council_Position_3_map.html
 
 # Create output directory
 os.makedirs('data/maps', exist_ok=True)
