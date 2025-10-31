@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_2793df699043da95a3c5efcf98e4726c {
+                #map_6683beb397b6fef7d64a84cb53d80b06 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,13 +54,13 @@
 <body>
     
     
-    <div style="position: fixed; 
-                top: 10px; right: 10px; width: 280px; 
-                background-color: white; border:2px solid grey; z-index:9999; 
-                font-size:14px; padding: 10px">
-        <p style="margin: 5px 0;"><b>CITY OF MOUNTLAKE TERRACE Council Position 3</b></p>
-        <hr style="margin: 5px 0;">
-    
+            <div style="position: fixed; 
+                        top: 10px; right: 10px; width: 320px; 
+                        background-color: white; border:2px solid grey; z-index:9999; 
+                        font-size:14px; padding: 10px">
+                <p style="margin: 5px 0;"><b>CITY OF MOUNTLAKE TERRACE Council Position 3</b></p>
+                <hr style="margin: 5px 0;">
+            
             <p style="margin: 5px 0; font-weight: bold;">
                 <span style="background-color:brown; 
                       width: 20px; height: 20px; 
@@ -108,14 +108,14 @@
     </div>
     
     
-            <div class="folium-map" id="map_2793df699043da95a3c5efcf98e4726c" ></div>
+            <div class="folium-map" id="map_6683beb397b6fef7d64a84cb53d80b06" ></div>
         
 </body>
 <script>
     
     
-            var map_2793df699043da95a3c5efcf98e4726c = L.map(
-                "map_2793df699043da95a3c5efcf98e4726c",
+            var map_6683beb397b6fef7d64a84cb53d80b06 = L.map(
+                "map_6683beb397b6fef7d64a84cb53d80b06",
                 {
                     center: [47.79055436160074, -122.3313835699008],
                     crs: L.CRS.EPSG3857,
@@ -132,7 +132,7 @@
 
         
     
-            var tile_layer_606a34664e4229b9ab2d778f7d1dea23 = L.tileLayer(
+            var tile_layer_e27cb0508bf2ad3bf287c9b01aaa9e42 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -149,103 +149,103 @@
             );
         
     
-            tile_layer_606a34664e4229b9ab2d778f7d1dea23.addTo(map_2793df699043da95a3c5efcf98e4726c);
+            tile_layer_e27cb0508bf2ad3bf287c9b01aaa9e42.addTo(map_6683beb397b6fef7d64a84cb53d80b06);
         
     
-        function geo_json_7d6742822cdc38f63b4aef889ec57b96_styler(feature) {
+        function geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "brown", "fillOpacity": 0.6, "weight": 1};
             }
         }
 
-        function geo_json_7d6742822cdc38f63b4aef889ec57b96_onEachFeature(feature, layer) {
+        function geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_7d6742822cdc38f63b4aef889ec57b96 = L.geoJson(null, {
-                onEachFeature: geo_json_7d6742822cdc38f63b4aef889ec57b96_onEachFeature,
+        var geo_json_db13d4817c90ff3c994fcb7ded3fe5b0 = L.geoJson(null, {
+                onEachFeature: geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_onEachFeature,
             
-                style: geo_json_7d6742822cdc38f63b4aef889ec57b96_styler,
+                style: geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_styler,
             ...{
 }
         });
 
-        function geo_json_7d6742822cdc38f63b4aef889ec57b96_add (data) {
-            geo_json_7d6742822cdc38f63b4aef889ec57b96
+        function geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_add (data) {
+            geo_json_db13d4817c90ff3c994fcb7ded3fe5b0
                 .addData(data);
         }
-            geo_json_7d6742822cdc38f63b4aef889ec57b96_add({"features": [{"geometry": {"coordinates": [[[-122.331295002321, 47.7996950561914], [-122.331424257888, 47.7996966163807], [-122.331439523087, 47.799696758883], [-122.331663430853, 47.7996994772634], [-122.33165957421743, 47.79970490354795], [-122.33145448947, 47.799702414078], [-122.331438989297, 47.7997022260814], [-122.331309897744, 47.7997006592564], [-122.33105445055466, 47.79969755705767], [-122.331295002321, 47.7996950561914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_db13d4817c90ff3c994fcb7ded3fe5b0_add({"features": [{"geometry": {"coordinates": [[[-122.331295002321, 47.7996950561914], [-122.331424257888, 47.7996966163807], [-122.331439523087, 47.799696758883], [-122.331663430853, 47.7996994772634], [-122.33165957421743, 47.79970490354795], [-122.33145448947, 47.799702414078], [-122.331438989297, 47.7997022260814], [-122.331309897744, 47.7997006592564], [-122.33105445055466, 47.79969755705767], [-122.331295002321, 47.7996950561914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-        var popup_4cf39a5b24fea3a8b8ba74cdd5acee39 = L.popup({
+        var popup_2316b385f85d0ea3b46e5fdc01a4dd68 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a38239644015a90791eca2e2f345cb3a = $(`<div id="html_a38239644015a90791eca2e2f345cb3a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 8</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1096</p>             <p style="margin: 5px 0;"><b>Contest:</b> CITY OF MOUNTLAKE TERRACE Council Position 3</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                    Michelle (Angrick) Delpeon: 34 votes (23.9%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Danny Luoma: 22 votes (15.5%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Othman Riad: 10 votes (7.0%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                 W William L. Paige, Jr.: 76 votes (53.5%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 142</p>         </div>         </div>`)[0];
-                popup_4cf39a5b24fea3a8b8ba74cdd5acee39.setContent(html_a38239644015a90791eca2e2f345cb3a);
+                var html_e7bcc7cdd42a3870407df6ded75f64e4 = $(`<div id="html_e7bcc7cdd42a3870407df6ded75f64e4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 8</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1096</p>             <p style="margin: 5px 0;"><b>Contest:</b> CITY OF MOUNTLAKE TERRACE Council Position 3</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                    Michelle (Angrick) Delpeon: 34 votes (23.9%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Danny Luoma: 22 votes (15.5%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Othman Riad: 10 votes (7.0%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                 W William L. Paige, Jr.: 76 votes (53.5%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 142</p>         </div>         </div>`)[0];
+                popup_2316b385f85d0ea3b46e5fdc01a4dd68.setContent(html_e7bcc7cdd42a3870407df6ded75f64e4);
             
         
 
-        geo_json_7d6742822cdc38f63b4aef889ec57b96.bindPopup(popup_4cf39a5b24fea3a8b8ba74cdd5acee39)
+        geo_json_db13d4817c90ff3c994fcb7ded3fe5b0.bindPopup(popup_2316b385f85d0ea3b46e5fdc01a4dd68)
         ;
 
         
     
     
-            geo_json_7d6742822cdc38f63b4aef889ec57b96.addTo(map_2793df699043da95a3c5efcf98e4726c);
+            geo_json_db13d4817c90ff3c994fcb7ded3fe5b0.addTo(map_6683beb397b6fef7d64a84cb53d80b06);
         
     
-        function geo_json_f4645a338d70a2d48c915744853e3efc_styler(feature) {
+        function geo_json_639d9c7377ebf40a96ced4cbe374acc7_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "brown", "fillOpacity": 0.6, "weight": 1};
             }
         }
 
-        function geo_json_f4645a338d70a2d48c915744853e3efc_onEachFeature(feature, layer) {
+        function geo_json_639d9c7377ebf40a96ced4cbe374acc7_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_f4645a338d70a2d48c915744853e3efc = L.geoJson(null, {
-                onEachFeature: geo_json_f4645a338d70a2d48c915744853e3efc_onEachFeature,
+        var geo_json_639d9c7377ebf40a96ced4cbe374acc7 = L.geoJson(null, {
+                onEachFeature: geo_json_639d9c7377ebf40a96ced4cbe374acc7_onEachFeature,
             
-                style: geo_json_f4645a338d70a2d48c915744853e3efc_styler,
+                style: geo_json_639d9c7377ebf40a96ced4cbe374acc7_styler,
             ...{
 }
         });
 
-        function geo_json_f4645a338d70a2d48c915744853e3efc_add (data) {
-            geo_json_f4645a338d70a2d48c915744853e3efc
+        function geo_json_639d9c7377ebf40a96ced4cbe374acc7_add (data) {
+            geo_json_639d9c7377ebf40a96ced4cbe374acc7
                 .addData(data);
         }
-            geo_json_f4645a338d70a2d48c915744853e3efc_add({"features": [{"geometry": {"coordinates": [[[[-122.329981040704, 47.781439701392], [-122.330722389937, 47.7814897900515], [-122.33073412978028, 47.78149520531905], [-122.329995848778, 47.7814453047378], [-122.329453397652, 47.7814086376345], [-122.3294501224266, 47.78140381965353], [-122.329981040704, 47.781439701392]]], [[[-122.332394207526, 47.7857048197887], [-122.332395735113, 47.785704885194], [-122.333317017375, 47.7857141220005], [-122.33331678705025, 47.785719602660855], [-122.332410912687, 47.7857104773676], [-122.332409323686, 47.7857104577489], [-122.331998797313, 47.7857053623151], [-122.33199632487026, 47.78569991256005], [-122.332394207526, 47.7857048197887]]], [[[-122.331399426174, 47.792235404467], [-122.33147065929, 47.7922362691115], [-122.331775434568, 47.7922398968654], [-122.332019659972, 47.7922427748136], [-122.332332577725, 47.7922465505991], [-122.332479619977, 47.7922482195023], [-122.332646000155, 47.7922502334393], [-122.332820520301, 47.7922523120655], [-122.33282047553499, 47.79225776115466], [-122.332660953593, 47.7922558657731], [-122.332494534368, 47.7922538874511], [-122.332347719516, 47.7922521427109], [-122.332034485484, 47.7922484187895], [-122.3317905384, 47.7922455183234], [-122.331485354513, 47.7922418887668], [-122.331414285891, 47.7922410345662], [-122.331342136871, 47.7922401666073], [-122.3313450777706, 47.7922347640593], [-122.331399426174, 47.792235404467]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_639d9c7377ebf40a96ced4cbe374acc7_add({"features": [{"geometry": {"coordinates": [[[[-122.329981040704, 47.781439701392], [-122.330722389937, 47.7814897900515], [-122.33073412978028, 47.78149520531905], [-122.329995848778, 47.7814453047378], [-122.329453397652, 47.7814086376345], [-122.3294501224266, 47.78140381965353], [-122.329981040704, 47.781439701392]]], [[[-122.332394207526, 47.7857048197887], [-122.332395735113, 47.785704885194], [-122.333317017375, 47.7857141220005], [-122.33331678705025, 47.785719602660855], [-122.332410912687, 47.7857104773676], [-122.332409323686, 47.7857104577489], [-122.331998797313, 47.7857053623151], [-122.33199632487026, 47.78569991256005], [-122.332394207526, 47.7857048197887]]], [[[-122.331399426174, 47.792235404467], [-122.33147065929, 47.7922362691115], [-122.331775434568, 47.7922398968654], [-122.332019659972, 47.7922427748136], [-122.332332577725, 47.7922465505991], [-122.332479619977, 47.7922482195023], [-122.332646000155, 47.7922502334393], [-122.332820520301, 47.7922523120655], [-122.33282047553499, 47.79225776115466], [-122.332660953593, 47.7922558657731], [-122.332494534368, 47.7922538874511], [-122.332347719516, 47.7922521427109], [-122.332034485484, 47.7922484187895], [-122.3317905384, 47.7922455183234], [-122.331485354513, 47.7922418887668], [-122.331414285891, 47.7922410345662], [-122.331342136871, 47.7922401666073], [-122.3313450777706, 47.7922347640593], [-122.331399426174, 47.792235404467]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-        var popup_536d47f26b166666d5bfec59b4f9941c = L.popup({
+        var popup_b6a824fb38026b9b9b7cfca89ef6308b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a3adf97439cf83ae159cef6ba4e712e9 = $(`<div id="html_a3adf97439cf83ae159cef6ba4e712e9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 10</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1137</p>             <p style="margin: 5px 0;"><b>Contest:</b> CITY OF MOUNTLAKE TERRACE Council Position 3</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                    Michelle (Angrick) Delpeon: 49 votes (20.2%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Danny Luoma: 39 votes (16.0%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Othman Riad: 18 votes (7.4%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                 W William L. Paige, Jr.: 137 votes (56.4%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 243</p>         </div>         </div>`)[0];
-                popup_536d47f26b166666d5bfec59b4f9941c.setContent(html_a3adf97439cf83ae159cef6ba4e712e9);
+                var html_37b389c4105c7fabde0dbd5f8690b783 = $(`<div id="html_37b389c4105c7fabde0dbd5f8690b783" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 10</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1137</p>             <p style="margin: 5px 0;"><b>Contest:</b> CITY OF MOUNTLAKE TERRACE Council Position 3</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                    Michelle (Angrick) Delpeon: 49 votes (20.2%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Danny Luoma: 39 votes (16.0%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                    Othman Riad: 18 votes (7.4%)             </p>                          <p style="margin: 2px 0; padding-left: 10px;">                 W William L. Paige, Jr.: 137 votes (56.4%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 243</p>         </div>         </div>`)[0];
+                popup_b6a824fb38026b9b9b7cfca89ef6308b.setContent(html_37b389c4105c7fabde0dbd5f8690b783);
             
         
 
-        geo_json_f4645a338d70a2d48c915744853e3efc.bindPopup(popup_536d47f26b166666d5bfec59b4f9941c)
+        geo_json_639d9c7377ebf40a96ced4cbe374acc7.bindPopup(popup_b6a824fb38026b9b9b7cfca89ef6308b)
         ;
 
         
     
     
-            geo_json_f4645a338d70a2d48c915744853e3efc.addTo(map_2793df699043da95a3c5efcf98e4726c);
+            geo_json_639d9c7377ebf40a96ced4cbe374acc7.addTo(map_6683beb397b6fef7d64a84cb53d80b06);
         
 </script>
 </html>

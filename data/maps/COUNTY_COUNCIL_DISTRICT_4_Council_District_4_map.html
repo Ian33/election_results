@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c3b98fb90e7a50491232fba138a1037d {
+                #map_7aef9bd10e768d8d310261449bd839df {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,13 +54,13 @@
 <body>
     
     
-    <div style="position: fixed; 
-                top: 10px; right: 10px; width: 280px; 
-                background-color: white; border:2px solid grey; z-index:9999; 
-                font-size:14px; padding: 10px">
-        <p style="margin: 5px 0;"><b>COUNTY COUNCIL DISTRICT 4 Council District 4</b></p>
-        <hr style="margin: 5px 0;">
-    
+            <div style="position: fixed; 
+                        top: 10px; right: 10px; width: 320px; 
+                        background-color: white; border:2px solid grey; z-index:9999; 
+                        font-size:14px; padding: 10px">
+                <p style="margin: 5px 0;"><b>COUNTY COUNCIL DISTRICT 4 Council District 4</b></p>
+                <hr style="margin: 5px 0;">
+            
             <p style="margin: 5px 0; font-weight: bold;">
                 <span style="background-color:orange; 
                       width: 20px; height: 20px; 
@@ -78,14 +78,14 @@
     </div>
     
     
-            <div class="folium-map" id="map_c3b98fb90e7a50491232fba138a1037d" ></div>
+            <div class="folium-map" id="map_7aef9bd10e768d8d310261449bd839df" ></div>
         
 </body>
 <script>
     
     
-            var map_c3b98fb90e7a50491232fba138a1037d = L.map(
-                "map_c3b98fb90e7a50491232fba138a1037d",
+            var map_7aef9bd10e768d8d310261449bd839df = L.map(
+                "map_7aef9bd10e768d8d310261449bd839df",
                 {
                     center: [47.79055436160074, -122.3313835699008],
                     crs: L.CRS.EPSG3857,
@@ -102,7 +102,7 @@
 
         
     
-            var tile_layer_e663ae8129674e6c9b9adce5085ff6a7 = L.tileLayer(
+            var tile_layer_9ca59a7fa8af97b9c5296968ecb031a9 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -119,103 +119,103 @@
             );
         
     
-            tile_layer_e663ae8129674e6c9b9adce5085ff6a7.addTo(map_c3b98fb90e7a50491232fba138a1037d);
+            tile_layer_9ca59a7fa8af97b9c5296968ecb031a9.addTo(map_7aef9bd10e768d8d310261449bd839df);
         
     
-        function geo_json_86e9f6d7c78284fc0d396d4e6d074c07_styler(feature) {
+        function geo_json_34639bef025e7c18ee73db359274a75f_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
             }
         }
 
-        function geo_json_86e9f6d7c78284fc0d396d4e6d074c07_onEachFeature(feature, layer) {
+        function geo_json_34639bef025e7c18ee73db359274a75f_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_86e9f6d7c78284fc0d396d4e6d074c07 = L.geoJson(null, {
-                onEachFeature: geo_json_86e9f6d7c78284fc0d396d4e6d074c07_onEachFeature,
+        var geo_json_34639bef025e7c18ee73db359274a75f = L.geoJson(null, {
+                onEachFeature: geo_json_34639bef025e7c18ee73db359274a75f_onEachFeature,
             
-                style: geo_json_86e9f6d7c78284fc0d396d4e6d074c07_styler,
+                style: geo_json_34639bef025e7c18ee73db359274a75f_styler,
             ...{
 }
         });
 
-        function geo_json_86e9f6d7c78284fc0d396d4e6d074c07_add (data) {
-            geo_json_86e9f6d7c78284fc0d396d4e6d074c07
+        function geo_json_34639bef025e7c18ee73db359274a75f_add (data) {
+            geo_json_34639bef025e7c18ee73db359274a75f
                 .addData(data);
         }
-            geo_json_86e9f6d7c78284fc0d396d4e6d074c07_add({"features": [{"geometry": {"coordinates": [[[-122.331295002321, 47.7996950561914], [-122.331424257888, 47.7996966163807], [-122.331439523087, 47.799696758883], [-122.331663430853, 47.7996994772634], [-122.33165957421743, 47.79970490354795], [-122.33145448947, 47.799702414078], [-122.331438989297, 47.7997022260814], [-122.331309897744, 47.7997006592564], [-122.33105445055466, 47.79969755705767], [-122.331295002321, 47.7996950561914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_34639bef025e7c18ee73db359274a75f_add({"features": [{"geometry": {"coordinates": [[[-122.331295002321, 47.7996950561914], [-122.331424257888, 47.7996966163807], [-122.331439523087, 47.799696758883], [-122.331663430853, 47.7996994772634], [-122.33165957421743, 47.79970490354795], [-122.33145448947, 47.799702414078], [-122.331438989297, 47.7997022260814], [-122.331309897744, 47.7997006592564], [-122.33105445055466, 47.79969755705767], [-122.331295002321, 47.7996950561914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-        var popup_6ee35f8322619b875f93f3485a43fb62 = L.popup({
+        var popup_832c28150c4b7682d1d9703ef07ae616 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7cb57be1f452437eb78aa8067a223519 = $(`<div id="html_7cb57be1f452437eb78aa8067a223519" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 8</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1096</p>             <p style="margin: 5px 0;"><b>Contest:</b> COUNTY COUNCIL DISTRICT 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 127 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 127</p>         </div>         </div>`)[0];
-                popup_6ee35f8322619b875f93f3485a43fb62.setContent(html_7cb57be1f452437eb78aa8067a223519);
+                var html_01458b3df6ed5e36bb9f6dde3892fb58 = $(`<div id="html_01458b3df6ed5e36bb9f6dde3892fb58" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 8</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1096</p>             <p style="margin: 5px 0;"><b>Contest:</b> COUNTY COUNCIL DISTRICT 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 127 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 127</p>         </div>         </div>`)[0];
+                popup_832c28150c4b7682d1d9703ef07ae616.setContent(html_01458b3df6ed5e36bb9f6dde3892fb58);
             
         
 
-        geo_json_86e9f6d7c78284fc0d396d4e6d074c07.bindPopup(popup_6ee35f8322619b875f93f3485a43fb62)
+        geo_json_34639bef025e7c18ee73db359274a75f.bindPopup(popup_832c28150c4b7682d1d9703ef07ae616)
         ;
 
         
     
     
-            geo_json_86e9f6d7c78284fc0d396d4e6d074c07.addTo(map_c3b98fb90e7a50491232fba138a1037d);
+            geo_json_34639bef025e7c18ee73db359274a75f.addTo(map_7aef9bd10e768d8d310261449bd839df);
         
     
-        function geo_json_5aea074c5a024ebc035e7516fc22c46f_styler(feature) {
+        function geo_json_b49744163a002a0cd497f64f40336932_styler(feature) {
             switch(feature.id) {
                 default:
                     return {"color": "black", "fillColor": "orange", "fillOpacity": 0.6, "weight": 1};
             }
         }
 
-        function geo_json_5aea074c5a024ebc035e7516fc22c46f_onEachFeature(feature, layer) {
+        function geo_json_b49744163a002a0cd497f64f40336932_onEachFeature(feature, layer) {
 
             layer.on({
             });
         };
-        var geo_json_5aea074c5a024ebc035e7516fc22c46f = L.geoJson(null, {
-                onEachFeature: geo_json_5aea074c5a024ebc035e7516fc22c46f_onEachFeature,
+        var geo_json_b49744163a002a0cd497f64f40336932 = L.geoJson(null, {
+                onEachFeature: geo_json_b49744163a002a0cd497f64f40336932_onEachFeature,
             
-                style: geo_json_5aea074c5a024ebc035e7516fc22c46f_styler,
+                style: geo_json_b49744163a002a0cd497f64f40336932_styler,
             ...{
 }
         });
 
-        function geo_json_5aea074c5a024ebc035e7516fc22c46f_add (data) {
-            geo_json_5aea074c5a024ebc035e7516fc22c46f
+        function geo_json_b49744163a002a0cd497f64f40336932_add (data) {
+            geo_json_b49744163a002a0cd497f64f40336932
                 .addData(data);
         }
-            geo_json_5aea074c5a024ebc035e7516fc22c46f_add({"features": [{"geometry": {"coordinates": [[[[-122.329981040704, 47.781439701392], [-122.330722389937, 47.7814897900515], [-122.33073412978028, 47.78149520531905], [-122.329995848778, 47.7814453047378], [-122.329453397652, 47.7814086376345], [-122.3294501224266, 47.78140381965353], [-122.329981040704, 47.781439701392]]], [[[-122.332394207526, 47.7857048197887], [-122.332395735113, 47.785704885194], [-122.333317017375, 47.7857141220005], [-122.33331678705025, 47.785719602660855], [-122.332410912687, 47.7857104773676], [-122.332409323686, 47.7857104577489], [-122.331998797313, 47.7857053623151], [-122.33199632487026, 47.78569991256005], [-122.332394207526, 47.7857048197887]]], [[[-122.331399426174, 47.792235404467], [-122.33147065929, 47.7922362691115], [-122.331775434568, 47.7922398968654], [-122.332019659972, 47.7922427748136], [-122.332332577725, 47.7922465505991], [-122.332479619977, 47.7922482195023], [-122.332646000155, 47.7922502334393], [-122.332820520301, 47.7922523120655], [-122.33282047553499, 47.79225776115466], [-122.332660953593, 47.7922558657731], [-122.332494534368, 47.7922538874511], [-122.332347719516, 47.7922521427109], [-122.332034485484, 47.7922484187895], [-122.3317905384, 47.7922455183234], [-122.331485354513, 47.7922418887668], [-122.331414285891, 47.7922410345662], [-122.331342136871, 47.7922401666073], [-122.3313450777706, 47.7922347640593], [-122.331399426174, 47.792235404467]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+            geo_json_b49744163a002a0cd497f64f40336932_add({"features": [{"geometry": {"coordinates": [[[[-122.329981040704, 47.781439701392], [-122.330722389937, 47.7814897900515], [-122.33073412978028, 47.78149520531905], [-122.329995848778, 47.7814453047378], [-122.329453397652, 47.7814086376345], [-122.3294501224266, 47.78140381965353], [-122.329981040704, 47.781439701392]]], [[[-122.332394207526, 47.7857048197887], [-122.332395735113, 47.785704885194], [-122.333317017375, 47.7857141220005], [-122.33331678705025, 47.785719602660855], [-122.332410912687, 47.7857104773676], [-122.332409323686, 47.7857104577489], [-122.331998797313, 47.7857053623151], [-122.33199632487026, 47.78569991256005], [-122.332394207526, 47.7857048197887]]], [[[-122.331399426174, 47.792235404467], [-122.33147065929, 47.7922362691115], [-122.331775434568, 47.7922398968654], [-122.332019659972, 47.7922427748136], [-122.332332577725, 47.7922465505991], [-122.332479619977, 47.7922482195023], [-122.332646000155, 47.7922502334393], [-122.332820520301, 47.7922523120655], [-122.33282047553499, 47.79225776115466], [-122.332660953593, 47.7922558657731], [-122.332494534368, 47.7922538874511], [-122.332347719516, 47.7922521427109], [-122.332034485484, 47.7922484187895], [-122.3317905384, 47.7922455183234], [-122.331485354513, 47.7922418887668], [-122.331414285891, 47.7922410345662], [-122.331342136871, 47.7922401666073], [-122.3313450777706, 47.7922347640593], [-122.331399426174, 47.792235404467]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
 
         
     
-        var popup_8986bb80632d26fc56a829b1e9180ac8 = L.popup({
+        var popup_0ff63d5d9f5eb0f5e2ca1de3ee8ff397 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d6cd29c8018d094e84bb2e34c0974baf = $(`<div id="html_d6cd29c8018d094e84bb2e34c0974baf" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 10</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1137</p>             <p style="margin: 5px 0;"><b>Contest:</b> COUNTY COUNCIL DISTRICT 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 197 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 197</p>         </div>         </div>`)[0];
-                popup_8986bb80632d26fc56a829b1e9180ac8.setContent(html_d6cd29c8018d094e84bb2e34c0974baf);
+                var html_3c1ade544171c832fb6a21cf12a60d50 = $(`<div id="html_3c1ade544171c832fb6a21cf12a60d50" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 10</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1137</p>             <p style="margin: 5px 0;"><b>Contest:</b> COUNTY COUNCIL DISTRICT 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 197 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 197</p>         </div>         </div>`)[0];
+                popup_0ff63d5d9f5eb0f5e2ca1de3ee8ff397.setContent(html_3c1ade544171c832fb6a21cf12a60d50);
             
         
 
-        geo_json_5aea074c5a024ebc035e7516fc22c46f.bindPopup(popup_8986bb80632d26fc56a829b1e9180ac8)
+        geo_json_b49744163a002a0cd497f64f40336932.bindPopup(popup_0ff63d5d9f5eb0f5e2ca1de3ee8ff397)
         ;
 
         
     
     
-            geo_json_5aea074c5a024ebc035e7516fc22c46f.addTo(map_c3b98fb90e7a50491232fba138a1037d);
+            geo_json_b49744163a002a0cd497f64f40336932.addTo(map_7aef9bd10e768d8d310261449bd839df);
         
 </script>
 </html>
