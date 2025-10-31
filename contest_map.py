@@ -15,20 +15,12 @@ edm_precincts = gpd.read_file(r"data/gs_data/edmonds_precincts.geojson")
 edm_precincts["precinct"] = pd.to_numeric(edm_precincts["precinct"])
 edm_precincts = edm_precincts.to_crs(epsg=4326)
 
-"""county_precincts = gpd.read_file(r"data/gs_data/county_precincts.geojson")
-county_precincts["precinct"] = pd.to_numeric(county_precincts["precinct"])
-county_precincts = county_precincts.to_crs(epsg=4326)
-print(county_precincts)"""
 # Merge data with geometry - KEEP AS GEODATAFRAME
 edm_data = gpd.GeoDataFrame(
     edm_precincts.merge(data, on="precinct", how="inner"),
     geometry='geometry',
     crs=edm_precincts.crs
 )
-"""edm_data = gpd.GeoDataFrame(
-    county_precincts.merge(data, on="precinct", how="inner"),
-    geometry='geometry',
-    crs=county_precincts.crs)"""
 
 # Function to determine winner for each precinct/contest
 def get_precinct_winners(df):
@@ -52,6 +44,13 @@ for contest in contests:
     # Filter data for this contest
     contest_data = edm_data[edm_data['contest'] == contest]
     contest_winners = winners_df[winners_df['contest'] == contest]
+    
+    # Calculate total votes per candidate for this contest
+    candidate_totals = contest_data.groupby('candidate')['votes'].sum().to_dict()
+    total_contest_votes = sum(candidate_totals.values())
+    
+    # Find overall winner
+    overall_winner = max(candidate_totals, key=candidate_totals.get)
     
     # Merge winners back with geometry - KEEP AS GEODATAFRAME
     contest_geo = gpd.GeoDataFrame(
@@ -117,29 +116,48 @@ for contest in contests:
             popup=folium.Popup(popup_html, max_width=300)
         ).add_to(m)
     
-    # Add legend
+    # Add legend with vote totals
     legend_html = f'''
     <div style="position: fixed; 
-                top: 10px; right: 10px; width: 200px; 
+                top: 10px; right: 10px; width: 280px; 
                 background-color: white; border:2px solid grey; z-index:9999; 
                 font-size:14px; padding: 10px">
         <p style="margin: 5px 0;"><b>{contest}</b></p>
         <hr style="margin: 5px 0;">
     '''
     
-    for candidate in unique_candidates:
+    # Sort candidates by votes (winner first)
+    sorted_candidates = sorted(candidate_totals.items(), key=lambda x: x[1], reverse=True)
+    
+    for candidate, votes in sorted_candidates:
         if candidate in contest_data['candidate'].values:
             color = candidate_colors.get(candidate, 'gray')
+            percentage = (votes / total_contest_votes * 100) if total_contest_votes > 0 else 0
+            is_winner = candidate == overall_winner
+            
+            # Bold the winner
+            font_weight = 'bold' if is_winner else 'normal'
+            
             legend_html += f'''
-            <p style="margin: 5px 0;">
+            <p style="margin: 5px 0; font-weight: {font_weight};">
                 <span style="background-color:{color}; 
                       width: 20px; height: 20px; 
                       display: inline-block; border: 1px solid black;">
-                </span> {candidate}
+                </span> {candidate}<br>
+                <span style="margin-left: 30px; font-size: 12px;">
+                    {votes:,} votes ({percentage:.1f}%)
+                </span>
             </p>
             '''
     
-    legend_html += '</div>'
+    legend_html += f'''
+        <hr style="margin: 5px 0;">
+        <p style="margin: 5px 0; font-size: 12px;">
+            <b>Total:</b> {total_contest_votes:,} votes
+        </p>
+    </div>
+    '''
+    
     m.get_root().html.add_child(folium.Element(legend_html))
     
     # Save map
