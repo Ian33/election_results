@@ -11,10 +11,11 @@ data = pd.read_csv(file_path, header = None)
 data.columns = ["contest", "candidate", "name", "precinct", "votes"]
 data = data[data['precinct'] != -1]
 data = data[data["candidate"] != "WRITE-IN"]
-data = data.drop(columns = ["precinct"])
+data = data.drop(columns = ["name"])
+
 data.to_csv(r"data/all_results.csv", index = False)
 print(data)
 # list unique contests
-#print(data["contest"].unique())
+print(data["contest"].unique())
 # list unique municipalities
 #print(data["municipality"].unique())
