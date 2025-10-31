@@ -2,6 +2,10 @@ import geopandas as gpd
 import folium
 import pandas as pd
 import os
+import numpy as np
+import math
+import matplotlib.colors as mcolors
+
 # to view a map https://ian33.github.io/election_results/data/maps/CITY_OF_EDMONDS_Council_Position_3_map.html
 
 # Create output directory
@@ -22,21 +26,71 @@ edm_data = gpd.GeoDataFrame(
     crs=edm_precincts.crs
 )
 
-# Function to determine winner for each precinct/contest
+# determin winner of precinct for contest
 def get_precinct_winners(df):
     # Group by precinct and contest, find candidate with most votes
     winners = df.loc[df.groupby(['precinct', 'contest'])['votes'].idxmax()]
     return winners
+def get_color_with_opacity(base_color, percentage):
+    """
+    Convert a color to have varying intensity based on percentage.
+    Returns color with opacity scaled by percentage.
+    """
+    # Normalize percentage to 0-1 range
+    normalized = percentage / 100.0
+    
+    # For fillOpacity approach (keeps color consistent, varies transparency)
+    return base_color, normalized
 
-# Get winners for each precinct/contest
+def get_gradient_color(base_color, percentage):
+    # Map percentage to index (0-10)
+    if percentage < 20:
+        idx = 0
+    elif percentage < 25:
+        idx = 1
+    elif percentage < 30:
+        idx = 2
+    elif percentage < 35:
+        idx = 3
+    elif percentage < 40:
+        idx = 4
+    elif percentage < 45:
+        idx = 5
+    elif percentage < 50:
+        idx = 6
+    elif percentage < 55:
+        idx = 7
+    elif percentage < 60:
+        idx = 8
+    elif percentage < 65:
+        idx = 9    
+    else:
+        idx = 10
+
+    color_gradients = {
+        'red': ['#FEEBE7','#FCC6BB','#FAA18F','#F87C63','#F54927','#F4320B','#C82909','#9C2007','#701705','#440E03','#180501'],
+        'green': ['#EFF6F0','#D2E5D4','#B5D4B9','#97C39D','#7AB382','#5DA266','#467A4D','#3C6841','#2B4A2F','#1A2D1D','#09100A'],
+        'blue': ['#E7E7FE','#BBBDFC','#8F93FA','#6368F8','#272EF5','#0B13F4','#0910C8','#070C9C','#050970','#030544','#010218'],
+        'orange': ['#FEF5E6','#FDE2BA','#FBCF8E','#F9BD62','#F7A328','#F69709','#CA7C07','#9D6106','#714604','#452A02','#190F01'],
+        'purple': ['#F7E6FE','#E9BAFD','#DA8EFB','#CC62F9','#B928F7','#AF09F6','#8F07CA','#70069D','#500471','#310245','#110119'],
+        'pink': ['#FDE8F9','#F9BEEE','#F594E3','#F16AD8','#ED37CC','#E916C3','#BF12A0','#950E7C','#6B0A59','#410636','#170213'],
+        'teal': ['#E8FDF9','#BEF9EF','#94F5E5','#6AF1DB','#37EDCF','#16E9C6','#12BFA2','#0E957F','#0A6B5B','#064137','#021714']
+    }
+
+    return color_gradients.get(base_color, color_gradients['red'])[idx]
+    
+
+# winners of each precinct
 winners_df = get_precinct_winners(edm_data)
 
-# Create a color map for candidates
+# create a color map for candidates
 unique_candidates = edm_data['candidate'].unique()
-colors = ['red', 'blue', 'green', 'orange', 'purple', 'yellow', 'pink', 'brown']
+colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink', 'teal']
 candidate_colors = {candidate: colors[i % len(colors)] for i, candidate in enumerate(unique_candidates)}
 
-# Get unique contests
+
+#gradient={'0':'Navy', '0.25':'Blue','0.5':'Green', '0.75':'Yellow','1': 'Red'}
+# get unique contests
 contests = edm_data['contest'].unique()
 
 # Create a map for each contest
@@ -103,15 +157,18 @@ for contest in contests:
             <p style="margin: 5px 0;"><b>Total Votes:</b> {total_votes}</p>
         </div>
         """
-        
+        base_color = candidate_colors.get(winner, 'gray')
+        # Method 1: Use gradient color (blends with white)
+        gradient_color = get_gradient_color(base_color, percentage)
         # Add to map with color based on winner
+        # Method 2: Use variable opacity (simpler, often better looking)
         folium.GeoJson(
             row['geometry'],
-            style_function=lambda x, color=candidate_colors.get(winner, 'gray'): {
+            style_function=lambda x, color=gradient_color, pct=percentage: {
                 'fillColor': color,
                 'color': 'black',
                 'weight': 1,
-                'fillOpacity': 0.6
+                'fillOpacity': 0.3 + (pct / 100.0 * 0.7)  # 0.3 to 1.0 range
             },
             popup=folium.Popup(popup_html, max_width=300)
         ).add_to(m)
