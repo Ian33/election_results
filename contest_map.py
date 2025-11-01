@@ -6,7 +6,7 @@ import numpy as np
 import math
 import matplotlib.colors as mcolors
 
-# to view a map https://ian33.github.io/election_results/data/maps/CITY_OF_EDMONDS_Council_Position_3_map.html
+# to view a map https://ian33.github.io/election_results/data/maps/City_Of_Edmonds_Council_Position_3_map.html
 
 # Create output directory
 os.makedirs('data/maps', exist_ok=True)
@@ -87,7 +87,7 @@ winners_df = get_precinct_winners(edm_data)
 
 # create a color map for candidates
 unique_candidates = edm_data['candidate'].unique()
-colors = ['teal', 'violet', 'green', 'orange', 'red', 'blue', 'pink','purple']
+colors = ['teal', 'violet', 'green', 'orange', 'red', 'blue','purple'] # excluding pink
 candidate_colors = {candidate: colors[i % len(colors)] for i, candidate in enumerate(unique_candidates)}
 
 
