@@ -12,8 +12,10 @@ data.columns = ["contest", "candidate", "name", "precinct", "votes"]
 data = data[data['precinct'] != -1]
 data = data[data["candidate"] != "WRITE-IN"]
 data = data.drop(columns = ["name"])
+data["contest"] = data["contest"].str.lower().str.title() # change caseing
 
 data.to_csv(r"data/all_results.csv", index = False)
+
 print(data)
 # list unique contests
 print(data["contest"].unique())

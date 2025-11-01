@@ -222,6 +222,6 @@ for contest in contests:
     # Save map
     safe_filename = contest.replace(' ', '_').replace('/', '_')
     m.save(f'data/maps/{safe_filename}_map.html')
-    print(f"✓ Saved: {safe_filename}_map.html")
+    print(f"saved: {safe_filename}_map.html")
 
-print("\n✓ All maps created!")
+print("all maps created!")
