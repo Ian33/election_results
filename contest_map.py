@@ -76,7 +76,7 @@ def get_gradient_color(base_color, percentage):
         'pink': ['#FDE8F9','#F9BEEE','#F594E3','#F16AD8','#ED37CC','#E916C3','#BF12A0','#950E7C','#6B0A59','#410636','#170213'],
         'teal': ['#E8FDF9','#BEF9EF','#94F5E5','#6AF1DB','#37EDCF','#16E9C6','#12BFA2','#0E957F','#0A6B5B','#064137','#021714']
     }
-
+ 
     return color_gradients.get(base_color, color_gradients['red'])[idx]
     
 
