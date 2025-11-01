@@ -5,5 +5,5 @@ Precinct Map of Edmonds election results
 to view a map https://ian33.github.io/election_results/data/maps/City_Of_Edmonds_Council_Position_3_map.html
 
 <iframe src="https://ian33.github.io/election_results/data/maps/City_Of_Edmonds_Council_Position_3_map.html" 
-        style="width: calc(80vw - 20px); height: 80vh; margin: 10px; border: none;">
+        style="width: calc(80vw); height: 80vh; margin: 10px; border: none;">
 </iframe>
