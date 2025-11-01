@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_2a0a353aa0335c16bcff842161d5246a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div style="position: fixed; 
+                        top: 10px; right: 10px; width: 320px; 
+                        background-color: white; border:2px solid grey; z-index:9999; 
+                        font-size:14px; padding: 10px">
+                <p style="margin: 5px 0;"><b>County Council District 4 Council District 4</b></p>
+                <hr style="margin: 5px 0;">
+            
+            <p style="margin: 5px 0; font-weight: bold;">
+                <span style="background-color:orange; 
+                      width: 20px; height: 20px; 
+                      display: inline-block; border: 1px solid black;">
+                </span> Jared Mead<br>
+                <span style="margin-left: 30px; font-size: 12px;">
+                    324 votes (100.0%)
+                </span>
+            </p>
+            
+        <hr style="margin: 5px 0;">
+        <p style="margin: 5px 0; font-size: 12px;">
+            <b>Total:</b> 324 votes
+        </p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_2a0a353aa0335c16bcff842161d5246a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_2a0a353aa0335c16bcff842161d5246a = L.map(
+                "map_2a0a353aa0335c16bcff842161d5246a",
+                {
+                    center: [47.79055436160074, -122.3313835699008],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b11d9dec7c458c863d87a3f978d1bb3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1b11d9dec7c458c863d87a3f978d1bb3.addTo(map_2a0a353aa0335c16bcff842161d5246a);
+        
+    
+        function geo_json_0ce542f4904c3002b7be0b0814ccea8f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#190F01", "fillOpacity": 1.0, "weight": 1};
+            }
+        }
+
+        function geo_json_0ce542f4904c3002b7be0b0814ccea8f_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_0ce542f4904c3002b7be0b0814ccea8f = L.geoJson(null, {
+                onEachFeature: geo_json_0ce542f4904c3002b7be0b0814ccea8f_onEachFeature,
+            
+                style: geo_json_0ce542f4904c3002b7be0b0814ccea8f_styler,
+            ...{
+}
+        });
+
+        function geo_json_0ce542f4904c3002b7be0b0814ccea8f_add (data) {
+            geo_json_0ce542f4904c3002b7be0b0814ccea8f
+                .addData(data);
+        }
+            geo_json_0ce542f4904c3002b7be0b0814ccea8f_add({"features": [{"geometry": {"coordinates": [[[-122.331295002321, 47.7996950561914], [-122.331424257888, 47.7996966163807], [-122.331439523087, 47.799696758883], [-122.331663430853, 47.7996994772634], [-122.33165957421743, 47.79970490354795], [-122.33145448947, 47.799702414078], [-122.331438989297, 47.7997022260814], [-122.331309897744, 47.7997006592564], [-122.33105445055466, 47.79969755705767], [-122.331295002321, 47.7996950561914]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_275fc03545f4c657ff672162ebb77a2d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2cd4df429c417b3cda3df6ea7c19fd43 = $(`<div id="html_2cd4df429c417b3cda3df6ea7c19fd43" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 8</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1096</p>             <p style="margin: 5px 0;"><b>Contest:</b> County Council District 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 127 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 127</p>         </div>         </div>`)[0];
+                popup_275fc03545f4c657ff672162ebb77a2d.setContent(html_2cd4df429c417b3cda3df6ea7c19fd43);
+            
+        
+
+        geo_json_0ce542f4904c3002b7be0b0814ccea8f.bindPopup(popup_275fc03545f4c657ff672162ebb77a2d)
+        ;
+
+        
+    
+    
+            geo_json_0ce542f4904c3002b7be0b0814ccea8f.addTo(map_2a0a353aa0335c16bcff842161d5246a);
+        
+    
+        function geo_json_63ec65cfe46ffa42e9eadda545bc1457_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "fillColor": "#190F01", "fillOpacity": 1.0, "weight": 1};
+            }
+        }
+
+        function geo_json_63ec65cfe46ffa42e9eadda545bc1457_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_63ec65cfe46ffa42e9eadda545bc1457 = L.geoJson(null, {
+                onEachFeature: geo_json_63ec65cfe46ffa42e9eadda545bc1457_onEachFeature,
+            
+                style: geo_json_63ec65cfe46ffa42e9eadda545bc1457_styler,
+            ...{
+}
+        });
+
+        function geo_json_63ec65cfe46ffa42e9eadda545bc1457_add (data) {
+            geo_json_63ec65cfe46ffa42e9eadda545bc1457
+                .addData(data);
+        }
+            geo_json_63ec65cfe46ffa42e9eadda545bc1457_add({"features": [{"geometry": {"coordinates": [[[[-122.329981040704, 47.781439701392], [-122.330722389937, 47.7814897900515], [-122.33073412978028, 47.78149520531905], [-122.329995848778, 47.7814453047378], [-122.329453397652, 47.7814086376345], [-122.3294501224266, 47.78140381965353], [-122.329981040704, 47.781439701392]]], [[[-122.332394207526, 47.7857048197887], [-122.332395735113, 47.785704885194], [-122.333317017375, 47.7857141220005], [-122.33331678705025, 47.785719602660855], [-122.332410912687, 47.7857104773676], [-122.332409323686, 47.7857104577489], [-122.331998797313, 47.7857053623151], [-122.33199632487026, 47.78569991256005], [-122.332394207526, 47.7857048197887]]], [[[-122.331399426174, 47.792235404467], [-122.33147065929, 47.7922362691115], [-122.331775434568, 47.7922398968654], [-122.332019659972, 47.7922427748136], [-122.332332577725, 47.7922465505991], [-122.332479619977, 47.7922482195023], [-122.332646000155, 47.7922502334393], [-122.332820520301, 47.7922523120655], [-122.33282047553499, 47.79225776115466], [-122.332660953593, 47.7922558657731], [-122.332494534368, 47.7922538874511], [-122.332347719516, 47.7922521427109], [-122.332034485484, 47.7922484187895], [-122.3317905384, 47.7922455183234], [-122.331485354513, 47.7922418887668], [-122.331414285891, 47.7922410345662], [-122.331342136871, 47.7922401666073], [-122.3313450777706, 47.7922347640593], [-122.331399426174, 47.792235404467]]]], "type": "MultiPolygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e47f5e8066995317579f93b87086025b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68da99e90f15ff40d55a4a84de860728 = $(`<div id="html_68da99e90f15ff40d55a4a84de860728" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; font-size: 12px; width: 250px;">             <h4 style="margin: 5px 0;">Mountlake Terrace 10</h4>             <p style="margin: 5px 0;"><b>Precinct:</b> 1137</p>             <p style="margin: 5px 0;"><b>Contest:</b> County Council District 4 Council District 4</p>             <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Results:</b></p>                      <p style="margin: 2px 0; padding-left: 10px;">                 W Jared Mead: 197 votes (100.0%)             </p>                          <hr style="margin: 5px 0;">             <p style="margin: 5px 0;"><b>Total Votes:</b> 197</p>         </div>         </div>`)[0];
+                popup_e47f5e8066995317579f93b87086025b.setContent(html_68da99e90f15ff40d55a4a84de860728);
+            
+        
+
+        geo_json_63ec65cfe46ffa42e9eadda545bc1457.bindPopup(popup_e47f5e8066995317579f93b87086025b)
+        ;
+
+        
+    
+    
+            geo_json_63ec65cfe46ffa42e9eadda545bc1457.addTo(map_2a0a353aa0335c16bcff842161d5246a);
+        
+</script>
+</html>
