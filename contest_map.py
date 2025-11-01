@@ -43,6 +43,7 @@ def get_color_with_opacity(base_color, percentage):
     return base_color, normalized
 
 def get_gradient_color(base_color, percentage):
+    print("base color", base_color)
     # Map percentage to index (0-10)
     if percentage < 20:
         idx = 0
@@ -74,7 +75,8 @@ def get_gradient_color(base_color, percentage):
         'orange': ['#FEF5E6','#FDE2BA','#FBCF8E','#F9BD62','#F7A328','#F69709','#CA7C07','#9D6106','#714604','#452A02','#190F01'],
         'purple': ['#F7E6FE','#E9BAFD','#DA8EFB','#CC62F9','#B928F7','#AF09F6','#8F07CA','#70069D','#500471','#310245','#110119'],
         'pink': ['#FDE8F9','#F9BEEE','#F594E3','#F16AD8','#ED37CC','#E916C3','#BF12A0','#950E7C','#6B0A59','#410636','#170213'],
-        'teal': ['#E8FDF9','#BEF9EF','#94F5E5','#6AF1DB','#37EDCF','#16E9C6','#12BFA2','#0E957F','#0A6B5B','#064137','#021714']
+        'teal': ['#E8FDF9','#BEF9EF','#94F5E5','#6AF1DB','#37EDCF','#16E9C6','#12BFA2','#0E957F','#0A6B5B','#064137','#021714'],
+        'violet': ['#EFE6FE','#D1BAFD','#B48DFB','#8B50FA','#7934F9','#5C08F7','#4B06CB','#3B059E','#2A0472','#1A0245','#090119'],
     }
  
     return color_gradients.get(base_color, color_gradients['red'])[idx]
@@ -85,7 +87,7 @@ winners_df = get_precinct_winners(edm_data)
 
 # create a color map for candidates
 unique_candidates = edm_data['candidate'].unique()
-colors = ['red', 'blue', 'green', 'orange', 'purple', 'pink', 'teal']
+colors = ['teal', 'violet', 'green', 'orange', 'red', 'blue', 'pink','purple']
 candidate_colors = {candidate: colors[i % len(colors)] for i, candidate in enumerate(unique_candidates)}
 
 
