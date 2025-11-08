@@ -4,7 +4,7 @@
 
 import pandas as pd
 
-file_path = "data/20250805_snohomishprecincts.csv"
+file_path = "data/20251104_snohomishprecincts.csv"
 
 data = pd.read_csv(file_path, header = None)
 # rename columns
